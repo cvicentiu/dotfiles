@@ -8,6 +8,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'cvicentiu/vim-colors-solarized'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/MatchTagAlways'
 Plugin 'ciaranm/detectindent'
 Plugin 'rhysd/vim-clang-format'
 "Plugin 'Lokaltog/vim-powerline'
@@ -21,6 +22,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lyuts/vim-rtags'
 Plugin 'peterhoeg/vim-qml'
+Bundle "merlinrebrovic/focus.vim"
 
 "Plugin 'jelera/vim-javascript-syntax'
 "Plugin 'pangloss/vim-javascript'
