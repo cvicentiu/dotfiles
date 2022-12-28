@@ -8,8 +8,11 @@ lsp.ensure_installed({
 	'clangd',
 })
 
+lsp.set_preferences({
+    sign_icons = { }
+})
+
 lsp.on_attach(function(client, bufnr)
 end)
+
 lsp.setup()
-
-
