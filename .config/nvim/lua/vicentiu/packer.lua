@@ -49,5 +49,24 @@ return require('packer').startup(function(use)
   }
 
   use { 'mhinz/vim-signify' }
-  use { 'vimwiki/vimwiki' }
+  use {
+      'vimwiki/vimwiki',
+      config = function()
+          vim.g.vimwiki_list = {
+              {
+                  path = '~/Documents/wiki',
+                  path_html = '~/Documents/wiki/html',
+                  ext = '.md'
+              },
+          }
+
+          vim.g.vimwiki_global_ext = 0
+
+          -- vim.g.vimwiki_ext2syntax = {
+          --     ['.md'] = 'markdown',
+          --     ['.markdown'] = 'markdown',
+          --     ['.mdown'] = 'markdown',
+          -- }
+      end
+  }
 end)
