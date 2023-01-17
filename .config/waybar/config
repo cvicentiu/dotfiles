@@ -63,6 +63,11 @@
         "tooltip": true
     },
 
+    "clock": {
+        "tooltip": true,
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt>{calendar}</tt>",
+    },
+
     "clock#time": {
         "interval": 1,
         "format": "{:%H:%M:%S}",
@@ -72,7 +77,8 @@
     "clock#date": {
       "interval": 10,
       "format": " {:%e %b %Y}", // Icon: calendar-alt
-      "tooltip-format": "{:%e %B %Y}"
+      "tooltip-format": "{:%e %B %Y}",
+          "on-click": "zenity --calendar"
     },
 
     "cpu": {
@@ -126,11 +132,11 @@
         "disable-scroll": true,
         "format": "{icon} {name}",
         "format-icons": {
-            "1:www": "龜", // Icon: firefox-browser
-            "2:mail": "", // Icon: mail
-            "3:editor": "", // Icon: code
-            "4:terminals": "", // Icon: terminal
-            "5:portal": "", // Icon: terminal
+            "1:code": "1 ", // Icon: code
+            "2:www": "2 ", // Icon: chrome-browser
+            "3:work": "3 ", // Icon: terminal
+            "4:terminals": "4 ", // Icon: terminal
+            "5:mail": "5 ", // Icon: mail
             "urgent": "",
             "focused": "",
             "default": ""
@@ -155,7 +161,7 @@
     },
 
     "temperature": {
-      "critical-threshold": 80,
+      "critical-threshold": 98,
       "interval": 1,
       "format": "{icon}  {temperatureC}°C",
       "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
