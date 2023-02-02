@@ -19,6 +19,7 @@ set $term kitty
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt, border pixel 10
+exec_always XDG_CURRENT_DESKTOP=sway
 set $menu exec $term --class=launcher -e /usr/bin/sway-launcher-desktop
 #set $menu exec $term -e env GLYPH_COMMAND="" GLYPH_DESKTOP="" GLYPH_PROMPT="? " sway-launcher-desktop
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
@@ -250,9 +251,10 @@ bindsym XF86AudioMicMute exec volumectl -m toggle
 bindsym XF86MonBrightnessUp exec lightctl up
 bindsym XF86MonBrightnessDown exec lightctl down
 
-exec_always "avizo-service"
+#exec_always --no-startup-id nm-applet --indicator
 
-exec_always --no-startup-id nm-applet --indicator
+bindsym Print exec sway-interactive-screenshot
+bindsym Shift+Print exec sway-interactive-screenshot --video
 
 set $gnome-schema org.gnome.desktop.interface
 
