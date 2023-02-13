@@ -1,0 +1,18 @@
+# Ignore everything:
+*
+# Except for the following config dirs.
+!.config
+!.config/sway
+!.config/sway/**
+!.config/swaylock
+!.config/swaylock/**
+!.config/nvim
+!.config/nvim/**
+!.config/waybar
+!.config/waybar/**
+!.ssh
+!.ssh/config
+!.ssh/config.d
+!.ssh/config.d/**
+!.gitignore
+
