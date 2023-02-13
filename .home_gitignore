@@ -14,5 +14,5 @@
 !.ssh/config
 !.ssh/config.d
 !.ssh/config.d/**
-!.gitignore
+!.home_gitignore
 
