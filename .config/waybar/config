@@ -135,7 +135,7 @@
             "1:code": "1 ", // Icon: code
             "2:www": "2 ", // Icon: chrome-browser
             "3:work": "3 ", // Icon: terminal
-            "4:terminals": "4 ", // Icon: terminal
+            "4:msg": "4 ", // Icon: telegram
             "5:mail": "5 ", // Icon: mail
             "urgent": "",
             "focused": "",

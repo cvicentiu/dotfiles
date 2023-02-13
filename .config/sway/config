@@ -128,7 +128,7 @@ output * bg $desktop-background fill
     set $ws1 1:code
     set $ws2 2:www
     set $ws3 3:work
-    set $ws4 4:terminals
+    set $ws4 4:msg
     set $ws5 5:mail
     set $ws6 number 6
     set $ws7 number 7
