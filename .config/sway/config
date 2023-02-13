@@ -24,11 +24,15 @@ set $menu exec $term --class=launcher -e /usr/bin/sway-launcher-desktop
 #set $menu exec $term -e env GLYPH_COMMAND="" GLYPH_DESKTOP="" GLYPH_PROMPT="? " sway-launcher-desktop
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
+set $desktop-background /home/vicentiu/.config/sway/lock-background.jpg
+set $swaylock swaylock -f -i $desktop-background
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/default.png fill
 output DP-2 scale 1
+output * bg $desktop-background fill
 # seat * xcursor_theme Vimix-White 32
 #
 # Example configuration:
@@ -286,13 +290,13 @@ bindsym $mod+Shift+n exec swaync-client -t -sw
 # Example configuration:
 #
 exec swayidle -w \
-    timeout 600 'swaylock -f' \
+    timeout 60 'swaylock -f -i /home/vicentiu/.config/sway/lock-background.jpg' \
     timeout 900 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f' \
+    before-sleep 'swaylock -f -i /home/vicentiu/.config/sway/lock-background.jpg'
 
 # Lock the screen
-bindsym $mod+Ctrl+l exec "swaylock -f"
+bindsym $mod+Ctrl+l exec $swaylock
 
 
 font pango:MesloLGS NF 14
