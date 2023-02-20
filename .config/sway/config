@@ -290,10 +290,12 @@ bindsym $mod+Shift+n exec swaync-client -t -sw
 # Example configuration:
 #
 exec swayidle -w \
-    timeout 600 $swaylock \
+    timeout 600 'swaylock -f -i /home/vicentiu/.config/sway/lock-background.jpg' \
     timeout 900 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
-    before-sleep $swaylock
+    before-sleep 'swaylock -f -i /home/vicentiu/.config/sway/lock-background.jpg'
+
+
 
 # Lock the screen
 bindsym $mod+Ctrl+l exec $swaylock
