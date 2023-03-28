@@ -48,7 +48,13 @@ return require('packer').startup(function(use)
     }
   }
 
-  use { 'mhinz/vim-signify' }
+  --use { 'mhinz/vim-signify' }
+  use {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+          require('gitsigns').setup()
+      end
+  }
   use {
       'vimwiki/vimwiki',
       config = function()
@@ -69,4 +75,5 @@ return require('packer').startup(function(use)
           -- }
       end
   }
+  use { 'stsewd/isort.nvim' }
 end)
