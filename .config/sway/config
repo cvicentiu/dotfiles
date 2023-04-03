@@ -101,22 +101,12 @@ output * bg $desktop-background fill
     bindsym $mod+$down focus down
     bindsym $mod+$up focus up
     bindsym $mod+$right focus right
-    # Or use $mod+[up|down|left|right]
-    bindsym $mod+Left focus left
-    bindsym $mod+Down focus down
-    bindsym $mod+Up focus up
-    bindsym $mod+Right focus right
 
     # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left
     bindsym $mod+Shift+$down move down
     bindsym $mod+Shift+$up move up
     bindsym $mod+Shift+$right move right
-    # Ditto, with arrow keys
-    bindsym $mod+Shift+Left move left
-    bindsym $mod+Shift+Down move down
-    bindsym $mod+Shift+Up move up
-    bindsym $mod+Shift+Right move right
 
 #    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 #    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -248,17 +238,20 @@ bindsym XF86AudioRaiseVolume exec volumectl up
 bindsym XF86AudioLowerVolume exec volumectl down
 bindsym XF86AudioMute exec volumectl toggle
 bindsym XF86AudioMicMute exec volumectl -m toggle
-# bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-# bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-# bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+
+bindsym $mod+Up exec volumectl up
+bindsym $mod+Down exec volumectl down
+bindsym $mod+t exec volumectl toggle
+bindsym $mod+m exec volumectl -m toggle
 
 bindsym XF86MonBrightnessUp exec lightctl up
 bindsym XF86MonBrightnessDown exec lightctl down
 
 #exec_always --no-startup-id nm-applet --indicator
 
-bindsym Print exec sway-interactive-screenshot
-bindsym Shift+Print exec sway-interactive-screenshot --video
+bindsym $mod+shift+p exec sway-interactive-screenshot
+bindsym $mod+p exec sway-interactive-screenshot --video
 
 set $gnome-schema org.gnome.desktop.interface
 
