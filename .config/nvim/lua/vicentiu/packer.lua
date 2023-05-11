@@ -62,7 +62,9 @@ return require('packer').startup(function(use)
               {
                   path = '~/Documents/wiki',
                   path_html = '~/Documents/wiki/html',
-                  ext = '.md'
+                  ext = '.md',
+                  syntax = 'markdown'
+
               },
           }
 
